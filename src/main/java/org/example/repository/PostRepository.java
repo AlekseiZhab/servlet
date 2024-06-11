@@ -1,12 +1,14 @@
 package org.example.repository;
 
 import org.example.model.Post;
+import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
-// Stub
+@Repository
 public class PostRepository {
     private final ConcurrentHashMap<Long, Post> longPostHashMap = new ConcurrentHashMap<>();
     private final AtomicLong idCounter = new AtomicLong(0);
